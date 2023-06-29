@@ -1,0 +1,13 @@
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "email": "vayun@gmail.com",
+    "password": "211090902"
+}
+
+GET http://localhost:8080/user/202306261247/tickets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMDIzMDYyNjkzMzYiLCJpYXQiOjE2ODc3NzMwNjB9.-o_AOxQrs9ycSiQ9rfQ9I6WddPPv8b5GnpXLhoPXNZg
+
+
+

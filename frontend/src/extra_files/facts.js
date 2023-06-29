@@ -1,0 +1,22 @@
+export const facts = [
+    "Ben & Jerry's is owned by Unilever.",
+    "Wal-Mart averages a profit of $1.8 million every hour.",
+    '"Yahoo" is an acronym for "Yet Another Hierarchical Officious Oracle."',
+    "Starbucks' round tables were created specifically so customers would feel less alone.",
+    "Apple's iPad retina display is actually manufactured by Samsung.",
+    "Dasani water is just purified tap water; it doesn't come from a natural spring.",
+    "One in 10 Europeans are conceived in an Ikea bed.",
+    'Marvel Comics once owned the rights to the word "zombie."',
+    "The red and white Coca-Cola logo is recognized by 94% of the world's population.",
+    "The iPad 2 would cost $1,140 if it were made in America.",
+    "Taco Bell has proved to be a huge flop in Mexico, as Mexicans were confused by the Americanization of their traditional cuisine.",
+    "Adding /4 to the end of Facebook's URL will take you to Mark Zuckerberg's profile.",
+    "Cereal is the second-largest advertiser on television today, behind automobiles.",
+    "Google was originally called BackRub.",
+    "Pepsi got its name from the digestive enzyme pepsin.",
+    "U.S. corporations are reportedly hiding $1.6 trillion in profits offshore.",
+    "Amazon.com employees spend two days every two years working at the customer service desk — even the CEO — in order to help all workers understand the customer service process.",
+    "Everything you say to Siri is sent to Apple, analyzed, and stored.",
+    "Candy Crush brings in a reported $633,000 a day in revenue.",
+    "Samsung accounts for 20% of Korea's gross domestic product."
+];
