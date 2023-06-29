@@ -20,7 +20,10 @@ const Navbar = () => {
         <Typography
           variant={{ lg: "h6", xs: "h9" }}
           component="div"
-          style={{ marginRight: "auto" }}
+          style={{
+            marginRight: "auto",
+            fontFamily: "Helvetica",
+          }}
         >
           Helpdesk Ticketing System
         </Typography>

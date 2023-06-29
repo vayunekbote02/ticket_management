@@ -81,6 +81,22 @@ server.post("/login", async (req, res) => {
   }
 });
 
+server.post("/verify-token", async (req, res) => {
+  try {
+    const { token } = req.body;
+
+    // Verify the token
+    const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+    const userId = decodedToken.userId;
+
+    // Token is valid, send the user ID
+    res.json({ userId });
+  } catch (error) {
+    // Token verification failed
+    res.status(401).json({ error: "Invalid token" });
+  }
+});
+
 server.get("/user/:user_id/tickets", authenticateToken, async (req, res) => {
   try {
     // Get the user ID from the request object

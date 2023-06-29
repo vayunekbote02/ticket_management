@@ -20,13 +20,27 @@ const LoginPage = () => {
   const [cookies] = useCookies(["token"]);
 
   useEffect(() => {
-    if (cookies.token) {
-      try {
-        navigate(`/user/1/tickets`);
-      } catch (error) {
-        console.error("Failed to decode token:", error);
+    const checkLoggedIn = async () => {
+      if (cookies.token) {
+        try {
+          const response = await axios.post(
+            "http://localhost:8080/verify-token",
+            { token: cookies.token }
+          );
+
+          if (response.status === 200) {
+            const { userId } = response.data;
+            navigate(`/user/${userId}/tickets`); // Replace `navigate` with your actual navigation logic
+          } else {
+            // Invalid token, do nothing (stay on login page)
+          }
+        } catch (error) {
+          console.error("Failed to verify token:", error);
+        }
       }
-    }
+    };
+
+    checkLoggedIn();
   }, [cookies.token, navigate]);
 
   const handleSubmit = async (event) => {
