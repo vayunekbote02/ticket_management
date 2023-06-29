@@ -1,12 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const Navbar = () => {
   const { user_id } = useParams();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    document.cookie = "token=; path=/;";
+    navigate("/");
+  };
+
   return (
     <AppBar position="floating">
       <Toolbar>
@@ -36,6 +43,9 @@ const Navbar = () => {
           >
             Create Ticket
           </Link>
+        </Button>
+        <Button color="inherit" onClick={handleLogout}>
+          Logout
         </Button>
       </Toolbar>
     </AppBar>

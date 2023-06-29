@@ -85,7 +85,7 @@ server.get("/user/:user_id/tickets", authenticateToken, async (req, res) => {
   try {
     // Get the user ID from the request object
     const { user_id } = req.params;
-    // Verify that the user ID matches the authenticated user
+    // Verify that the user ID matches the authenticated user, we are setting req.userId = payload.userId during authentication.
     if (user_id !== req.userId) {
       return res.sendStatus(403); // Forbidden if user ID doesn't match
     }
